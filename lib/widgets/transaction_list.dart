@@ -30,7 +30,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    '\$ ${transactions[0].amount}',
+                    '\$ ${transactions[index].amount.toStringAsFixed(2)}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -42,14 +42,14 @@ class TransactionList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      transactions[0].title,
+                      transactions[index].title,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
-                      DateFormat.yMMMd().format(transactions[0].date),
+                      DateFormat.yMMMd().format(transactions[index].date),
                       style: TextStyle(
                         color: Colors.grey,
                       ),
